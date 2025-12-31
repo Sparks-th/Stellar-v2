@@ -24,11 +24,28 @@
 
 ---
 
-## ⭐ Stellar
+# ⭐ Stellar (v2)
 
-**Stellar** is a program built with `Python`, `Bash`, and `Node.js` designed to improve the boring default appearance of **Termux**, giving it a fresh new look while adding new functionality.
+**Stellar** is a customization and utility framework for **Termux**, built using  
+`Python`, `Bash`, and `Node.js`.
 
-Although it includes several command-based tools oriented toward **hacking** and **OSINT**, its primary focus is enhancing the appearance of Termux by providing multiple layers of customization.
+It enhances the default Termux environment by improving its appearance, adding layered personalization, and providing built-in system, OSINT, and utility tools.
+
+Although Stellar includes commands oriented toward security and OSINT, its primary goal is to deliver a modern, customizable, and feature-rich Termux experience.
+
+---
+
+## 🚀 Version 2 Notice
+
+This repository represents **Stellar v2**, a major rewrite focused on:
+
+- Full English language support  
+- Improved structure and maintainability  
+- Better international accessibility  
+- Cleaner documentation  
+
+The original version of Stellar was written primarily in Spanish.  
+Some sections may still be under translation as v2 development continues.
 
 ---
 
@@ -50,51 +67,45 @@ Although it includes several command-based tools oriented toward **hacking** and
   </tr>
 </table>
 
-> **Note:** The appearance does not change based on language.  
-> Screenshots are taken from the Stellar system in Spanish.
+> Note: Appearance does not change with language.  
+> Screenshots shown are from the Spanish interface.
 
 ---
 
 ## 🗃️ Documentation
 
-- [English Documentation](https://github.com/Keiji821/Stellar/blob/master/docs/README_English.md)
-- [日本語のドキュメント](https://github.com/Keiji821/Stellar/blob/master/docs/README_Japanese.md)
-- [中文文檔](https://github.com/Keiji821/Stellar/blob/master/docs/README_Chinese.md)
-- [한국어 문서](https://github.com/Keiji821/Stellar/blob/master/docs/README_Korean.md)
-- [Portuguese Documentation](https://github.com/Keiji821/Stellar/blob/master/docs/README_Portuguese.md)
+- English Documentation  
+- Japanese Documentation  
+- Chinese Documentation  
+- Korean Documentation  
+- Portuguese Documentation  
 
 ---
 
-## 📄 Status Information
-
-⚠️ In-program language support for **Japanese, Chinese, Korean, English, and Portuguese** is coming soon.  
+## 📄 Status
 
 ⚠️ Still under active development — bugs may exist.  
+⚠️ Additional language support is planned.  
 
-📌 If you want to contribute to Stellar or report a bug, contact me on Discord: **`keiji100`**
+📌 To report bugs or contribute, contact via Discord: `keiji100`
 
 ---
 
-## 📜 Contents
+## 📑 Program Details
 
-### 📑 Program Details
-
-```text
+```
 Program Name: Stellar
-Creation Date: 06/01/2024
-Version: v0.0.0 (Still in development)
-Program Size: 17 MB
-Available Languages: Spanish only
-Author: Keiji821
+Version: v2 (in development)
+Initial Release: 06/01/2024
+Program Size: ~17 MB
+Primary Language: English
 ```
 
 ---
 
-### 📥 Installation Steps
+## 📥 Installation (Termux)
 
-Follow these steps to install Stellar on Termux:
-
-```bash
+```
 pkg update && pkg upgrade
 pkg install git -y
 git clone https://github.com/Keiji821/Stellar
@@ -102,36 +113,34 @@ cd Stellar
 bash install.sh
 ```
 
-After running `install.sh`, the Stellar installer will start.
-
-⚠️ Make sure you have a **stable internet connection**.  
-⚠️ After installation, your Termux session will restart.  
-⚠️ It is recommended to **close and reopen Termux** after installation for proper **TOR** functionality.
+Installation notes:
+- Stable internet connection required
+- Termux will restart after installation
+- Close and reopen Termux for proper TOR functionality
 
 ---
 
-### 🧩 Features
+## 🧩 Features
 
-Stellar pushes `Bash` to its limits **without using Zsh** for Termux customization.
+Stellar maximizes Bash customization without relying on Zsh.
 
-#### Features & Changes
-
-- Customizable banner (colors and background)
-- Device information table below the banner
-- Security layer using **TOR**
-- Custom Termux background colors
-- Built-in Stellar system utilities
-- Improved `termux-properties`
-- Native Stellar `command-not-found`
-- Fingerprint screen lock for Termux
+- Custom banner (ASCII, colors, background)
+- Device information panel
+- TOR-based security layer
+- Custom Termux background themes
+- Native Stellar utilities
+- Improved termux-properties
+- Custom command-not-found handler
+- Fingerprint lock support
 - Termux API integration
-- Default import of Termux-X11 variables
+- Termux-X11 variable import
 
 ---
 
-### 📦 APT Dependencies
+## 📦 Dependencies
 
-```text
+APT:
+```
 python
 cloudflared
 tor
@@ -146,11 +155,8 @@ termux-x11-nightly
 root-repo
 ```
 
----
-
-### 📦 PIP Dependencies
-
-```text
+PIP:
+```
 beautifulsoup4
 pyfiglet
 phonenumbers
@@ -167,118 +173,96 @@ pycryptodome
 
 ---
 
-### 🔨 Plugins
+## 🔨 Plugins
 
-**How to use?**  
-You can create your own Stellar commands in **any programming language**.  
-When Stellar starts, it automatically loads all plugins.
-
-**How to create a plugin?**  
-Place your plugin inside:
-
-```text
+Place plugins inside:
+```
 Stellar/plugins
 ```
 
-Restart the terminal and Stellar will load it automatically.
+Restart the terminal and Stellar will load them automatically.
 
-Supported by default:
+Supported languages:
 - Bash
 - Python
 - JavaScript
 
-You may also use other languages by installing their compilers manually.
+Other languages are supported if their compiler is installed.
 
 ---
 
-### 📀 Commands
+## 📀 Commands
 
-#### SYSTEM
-
-```bash
-menu         | Show available Stellar commands
-reload       | Reload system banner
+SYSTEM:
+```
+menu         | Show available commands
+reload       | Reload banner
 user-config  | Customize banner and profile
 my           | Show Stellar profile
-uninstall    | Completely uninstall Stellar
+uninstall    | Uninstall Stellar
 update       | Update from GitHub
-bash         | Restart terminal session
-reset        | Reset terminal to default
-x11          | Alias for termux-x11 :0 & export DISPLAY=:0
+bash         | Restart terminal
+reset        | Reset terminal
+x11          | Launch Termux-X11
 ```
 
-#### UTILITIES
-
-```bash
-ia           | AI service with free API
+UTILITIES:
+```
+ia           | AI service (free API)
 ia-image     | AI image generator
 translator   | Real-time translation
 myip         | Show public IP
-passwordgen  | Generate secure passwords
+passwordgen  | Generate passwords
 encrypt-file | Encrypt files
 ddos         | DDoS attack (IP + port)
 ```
 
-#### OSINT
-
-```bash
-ipinfo         | IP information
-urlinfo        | URL analysis
-userfinder     | Username search
-phoneinfo     | Phone number info
-metadatainfo  | File metadata extraction
-emailsearch   | Email search
-instagraminfo | Instagram profile metadata
+OSINT:
+```
+ipinfo
+urlinfo
+userfinder
+phoneinfo
+metadatainfo
+emailsearch
+instagraminfo
 ```
 
-#### DISCORD
-
-```bash
-userinfo             | User info (ID)
-serverinfo           | Server info (ID)
-searchinvites        | Search invites
-inviteinfo           | Analyze invites
-role-mapper          | Map roles (Server ID)
-mutual-servers       | Mutual servers
-webhook-mass-spam    | Webhook spam
-mass-delete-channels | Mass delete channels
+DISCORD:
+```
+userinfo
+serverinfo
+searchinvites
+inviteinfo
+role-mapper
+mutual-servers
+webhook-mass-spam
+mass-delete-channels
 ```
 
 ---
 
-### 📄 Usage Guide
+## 📄 Usage
 
 Install Stellar and use Termux normally.
 
 Use `user-config` to:
 - Change ASCII banner
-- Modify colors
-- Set background images or colors
-
-You can also switch Termux themes from dark to white or blue.
+- Adjust colors
+- Switch background themes
 
 ---
 
-### 🌹 Author
+## 👤 Maintainers
 
-```diff
-+ Keiji821 (Developer)
-```
-
-For questions or collaboration, contact me on Discord:
-
-<p align="left">
-  <a href="https://discord.com/users/983476283491110932">
-    <img src="https://img.shields.io/badge/Discord-Keiji-%235865F2?style=for-the-badge&logo=discord&logoColor=white">
-  </a>
-</p>
+Keiji821 — Original Creator  
+Dev Malvryx — Maintainer & v2 Rewrite (English Support)
 
 ---
 
-### ❤️ Donations
+## ❤️ Donations
 
-If you like this project and find it useful, consider supporting its development.
+If you find Stellar useful, consider supporting development.
 
-[![Binance Pay](https://img.shields.io/badge/Binance_Pay-Donate-F0B90B?style=for-the-badge&logo=binance&logoColor=white)](https://pay.binance.com/en)
-
-[![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/felixdppdcg69)
+Binance Pay  
+PayPal
